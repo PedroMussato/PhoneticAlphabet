@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+PhoneticAlphabet
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="m-3 text-center">
+        <label class="form-label">Type your frase here:</label>
+        <input class="form-control" type="text" name="frase" placeholder="type here!" {% if frase %} value="{{frase}}" {% endif %}>
+        <button class="mt-2 btn btn-primary" type="submit">Do!</button>
+    </div>
+    <div class="m-3">
+        <ol class="list-group">
+            {% for i in phonetic %}
+            <li class="list-group-item">
+                {{ i }}
+            </li>
+            {% endfor %}
+        </ol>    
+    </div>
+
+</form>
+{% endblock %}
