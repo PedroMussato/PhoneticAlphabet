@@ -10,7 +10,9 @@ def app(request):
             'm': 'mike', 'n': 'november', 'o': 'oscar', 'p': 'papa',
             'q': 'quebec', 'r': 'romeo', 's': 'sierra', 't': 'tango',
             'u': 'uniform', 'v': 'victor', 'w': 'whiskey', 'x': 'x-ray',
-            'y': 'yankee', 'z': 'zulu', '@': 'at', '.': 'dot'
+            'y': 'yankee', 'z': 'zulu', '@': 'at', '.': 'dot', '0':'zero'
+            '1':'one','2':'two','3':'three','4':'four','5':'five','6':'six',
+            '7':'seven','8':'eight','9':'nine',
         }
         frase = request.POST['frase']
         frase = frase.lower()
